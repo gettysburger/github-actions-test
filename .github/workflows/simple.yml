@@ -1,19 +1,17 @@
- name: Shell Commands
+name: Shell Commands
 
- on: [push]
+on: [push]
 
- jobs: 
-   run-shell-command:
-     runs-on: ubuntu-latest
-     steps:
-       - name: echo a string
-         run: echo "Hello World"
-       - name: multi-line script
-         run: |
-           node -v
-           npm -v
-
-           name: test-action
+jobs: 
+  run-shell-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo a string
+        run: echo "Hello World"
+      - name: multi-line script
+        run: |
+          node -v
+          npm -v
   test:
     runs-on: ubuntu-20.04
     strategy:
