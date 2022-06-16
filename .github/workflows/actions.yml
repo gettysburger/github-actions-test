@@ -24,6 +24,15 @@ jobs:
         run: |
           pwd
           ls -a 
+      - name: Install AWSCLI
+        id: install-aws-cli
+        uses: unfor19/install-aws-cli-action@v1.0.3
+        with:
+          version: 2     # default
+            verbose: false # default
+            arch: amd64    # allowed values: amd64, arm64
+            rootdir: ""    # defaults to "PWD"
+            workdir: ""    # defaults to "PWD/unfor19-awscli"
       - name: Simple Javascript Action
         id: greet
         uses: actions/hello-world-javascript-action@v1.1
